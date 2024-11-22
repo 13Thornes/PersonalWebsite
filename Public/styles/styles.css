@@ -6,7 +6,18 @@
   }
 
 body {
-    background-color: #dec4fc;
+    background-image: url("galaxy.jpeg");
+}
+
+.mainApp {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: pink;
+    max-width: 1500px;
+    max-height: 1500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
 }
 
 .container {
@@ -83,7 +94,7 @@ nav a:hover {
     margin: 20px;
 }
 .sillyWord, .def {
-    color: #957DAD;
+    color: black;
     font-weight: 700;
     font-size: 2rem;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include('./partials/head.ejs') %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,25 @@
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
+    <div class="mainApp">
+    <%- include('./partials/nav.ejs') %>
     <div class="container"> 
         <h2 class="title">Silly Word Generator</h2>
 
-            <p class="wordPhrase">Your sily word is: </p>
-            <p class="sillyWord"> ${word.wordName}</p>
-            <p class="defPhrase">Which means:</p>
-            <p class="def"> ${word.definition}<p>
-            <p class="moreWords">Want more words? Click the button again!</p>
-            <button>Refresh</button>
-
-    </div>
+            <% if (theWord.length > 0) { %>
+                <% theWord.forEach(word => { %>
+                    <h3 class="wordPhrase">Your silly word is: </h3>
+                    <p class="sillyWord"><%= word.word%></p>
+                    <p class="defPhrase">Which means:</p>
+                    <p class="def"><%= word.definition%></p>
+                    <p class="moreWords">Want more words? Click the button again!</p>
+                    <button>Refresh</button>
+                    <% }) %>
+                    <br>
+ </div>
+<br>
+<% } %>
     
-    
+</div>
 </body>
 </html>
