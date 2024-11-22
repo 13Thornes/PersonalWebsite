@@ -1,5 +1,5 @@
 INSERT INTO public.silly_words(
-	id, name, definition)
+	id, word, definition)
 	VALUES 
     (1, 'Bumfuzzle', 'Confused or perplexed'),
     (2, 'Fartlek', 'When runners change between sprinting and jogging'),

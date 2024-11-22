@@ -1,1 +1,1 @@
-SELECT name, definition FROM public.silly_words ORDER BY RANDOM() LIMIT 1;
+SELECT word, definition FROM public.silly_words ORDER BY RANDOM() LIMIT 1;
