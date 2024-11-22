@@ -1,26 +1,16 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-</head>
-<body>
-    <div class="container"> 
-        <h2 class="title">Silly Word Generator</h2>
-
-            <p class="wordPhrase">Your sily word is: </p>
-            <p class="sillyWord"> ${word.wordName}</p>
-            <p class="defPhrase">Which means:</p>
-            <p class="def"> ${word.definition}<p>
-            <p class="moreWords">Want more words? Click the button again!</p>
-            <button>Refresh</button>
-
-    </div>
-    
-    
-</body>
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <h1>Index Page</h1>
+        <br>
+        <h2>Welcome to the index page.</h2>
+        <br>
+        <p>To view my silly word generator, please click on the words link in the navigation bar.</p>
+        <br>
+        <p>To learn more about me, please click on the about link.</p>
+        <br>
+        <br>
+    </body>
+    <%- include('./partials/foot.ejs') %>
 </html>
-
-
