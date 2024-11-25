@@ -20,11 +20,6 @@ app.get('/', async (req, res) => {
     res.render('index', {status: req.status});
 });
 
-// get about page
-app.get('/about', (request, response) => {
-    response.render('about.ejs');
-});
-
 // get word page
 const wordsRouter = require('./Routes/words')
 app.use('/word', wordsRouter);
