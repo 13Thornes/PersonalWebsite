@@ -5,6 +5,8 @@ const app = express();
 const session = require('express-session');
 const PORT = 3000;
 const path = require('path');
+const serverless = require("serverless-http");
+const router = express.Router();
 
 global.DEBUG = true;
 app.set('view engine', 'ejs');
@@ -16,11 +18,6 @@ app.use(express.json());
 app.get('/', async (req, res) => {
     
     res.render('index', {status: req.status});
-});
-
-// get about page
-app.get('/about', (request, response) => {
-    response.render('about.ejs');
 });
 
 // get word page
@@ -35,4 +32,9 @@ app.listen(PORT, () => {
     console.log(`App running on port ${PORT}.`);
 });
 
+router.get("/", (req, res) => {res.send("App is running..")});
+
+app.use("/.netlify/functions/app", router);
+
+module.exports.handler = serverless(app);
 
